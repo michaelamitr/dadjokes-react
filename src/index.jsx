@@ -7,14 +7,14 @@ import { jokes } from './jokes';
 const App = () => {
   return (
     <div className="container">
-      {jokes.map((joke) => (
+      {jokes.map(({ id, avatar, name, text, likes, dislikes }) => (
         <Joke
-          key={joke.id}
-          userAvatar={joke.avatar}
-          userName={joke.name}
-          text={joke.text}
-          likes={joke.likes}
-          dislikes={joke.dislikes}
+          key={id}
+          userAvatar={avatar}
+          userName={name}
+          text={text}
+          likes={likes}
+          dislikes={dislikes}
         />
       ))}
     </div>
